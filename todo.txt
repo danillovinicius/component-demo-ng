@@ -1,0 +1,63 @@
+
+------------
+- permissao acessos (https://github.com/AlexKhymenko/ngx-permissions)
+- componente mensagem (https://github.com/artemsky/ng-snotify)
+- datepicker
+- componente feature-toggle (https://github.com/willmendesneto/ngx-feature-toggle)
+
+------------
+**Arquitetura**
+- Bootstrap 4
+- Menu
+- Route
+- padrao generico CRUD
+
+**componentes**
+- component show-diff
+- component paginação
+
+------------
+Montar Fluxo
+1.0 Cadastro Ind,
+1.1 Vincular Responsavel
+
+2.Montar Portif.
+
+
+------------
+Entidades
+
+indicador {
+  titulo
+  descricao
+  identidade
+  formula_calculo
+  unidade_medida {PERCENTUAL, CUSTO, PRAZO}
+  periodicidade_medicao {MENSAL, TRIMESTRAL, SEMESTRAL, ANUAL}
+  periodicidade_controle {MENSAL, TRIMESTRAL, SEMESTRAL, ANUAL}
+  situacao_revisao {em_homologacao, homologado, pendente}
+  polaridade
+  finalidade
+  dimensao_desenpenho {EFICIENCIA, EFICACIA, EFETIVIDADE}
+  {meta{valor, valor_maximo, valor_minimo}}
+  fonte_dados {PLANILHA, SISTEMA, EQUIPE}
+  [justificativas: {atributo, justificativa}]
+  origem_calculo_automatico
+  Responsavel responsavelRegistro
+  Responsavel responsavelAvaliacao
+  Avaliacao{justificativa, acao_corretiva, risco}
+  {situação do andamento da revisão do indicador e um comentário associado.}
+  Anexo {id, bytes}
+  [competencia_por_periodo_medicao {valor, periodicidade_medicao, valor}]
+  ponto de contato na unidade
+}
+
+portifolio {
+  ano,
+  data_inicio_revisao,
+  data_fim_revisao,
+  is_periodo_revisao_habilitado
+}
+
+usuario {}
+
