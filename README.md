@@ -1,3 +1,3 @@
-# component-demo-ng
+# ComponentDemoNg
 
-Project for angular demos
+Project demo for angular component.
